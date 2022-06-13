@@ -27,7 +27,7 @@ const AddForm = () => {
       onSubmit={handleSubmit}
       className="w-full flex space-x-4 items-end text-lightGreen font-bold"
     >
-      <div className="flex flex-col space-y-2 lg:w-64 w-36 ">
+      <div className="flex flex-col space-y-2 lg:w-64 w-28 ">
         <label htmlFor="name">Item Name :</label>
         <input
           required
