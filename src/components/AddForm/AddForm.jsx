@@ -25,7 +25,7 @@ const AddForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full flex space-x-4 items-end text-white font-bold"
+      className="w-full flex space-x-4 items-end text-lightGreen font-bold"
     >
       <div className="flex flex-col space-y-2 lg:w-64 w-36 ">
         <label htmlFor="name">Item Name :</label>
@@ -34,7 +34,7 @@ const AddForm = () => {
           ref={name}
           name="name"
           type="text"
-          className="rounded-sm border border-slate-500 bg-slate-900 px-2"
+          className="rounded-sm border border-gray bg-darkGreen text-white px-2"
         />
       </div>
       <div className="flex flex-col space-y-2 w-20">
@@ -44,12 +44,12 @@ const AddForm = () => {
           ref={price}
           name="price"
           type="number"
-          className="appearance-none border border-slate-500 rounded-sm bg-slate-900 px-2"
+          className="rounded-sm border border-gray bg-darkGreen text-white px-2"
         />
       </div>
       <button
         type="submit"
-        className=" bg-blue-500 hover:bg-blue-700 py-1 text-sm  px-4 rounded"
+        className="text-white bg-darkGreen hover:bg-lightGreen hover:text-black py-1 text-sm  px-4 rounded transition duration-300"
       >
         Add
       </button>

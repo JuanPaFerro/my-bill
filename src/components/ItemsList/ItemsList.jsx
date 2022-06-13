@@ -8,10 +8,10 @@ const ItemsList = () => {
     0
   );
   return (
-    <div className="w-full h-96 border-t overflow-auto border-slate-500 ">
+    <div className="w-full h-96 border-t overflow-auto border-lightGreen ">
       {items.length === 0 ? (
         <div className="w-full flex flex-col space-y-4 items-center mt-20">
-          <p className="text-3xl text-gray-300 text-center">Add items in the form above</p>
+          <p className="text-3xl text-lightGreen text-center">Add items in the form above</p>
           <p className="text-xl text-white font-bold">
             No items in the invoice
           </p>
@@ -20,12 +20,12 @@ const ItemsList = () => {
         items.map((item) => (
           <div
             key={item.id}
-            className="flex w-full min-h-10 p-2 text-white border-b border-slate-500 items-center justify-between"
+            className="flex w-full min-h-10 p-2 text-lightGreen border-b border-lightGreen items-center justify-between"
           >
             <div className="flex space-x-4">
               <button
                 onClick={() => removeItem(item.id)}
-                className="text-base font-bold text-red-500 hover:text-red-700"
+                className="text-base font-bold text-lightRed hover:text-darkRed"
               >
                 x
               </button>
@@ -41,7 +41,7 @@ const ItemsList = () => {
         ))
       )}
       {items.length !== 0 && (
-        <div className="flex justify-end pr-2 pt-2 text-white font-bold">
+        <div className="flex justify-end pr-2 pt-2 text-lightGreen font-bold">
           {Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD",
