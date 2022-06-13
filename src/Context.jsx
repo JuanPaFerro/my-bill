@@ -1,7 +1,17 @@
-import { useState, createContext } from "react";
+import { useState, useEffect, createContext } from "react";
 export const Context = createContext();
+
+const initialState = window.localStorage.getItem("items");
+
 export const Provider = ({ children }) => {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(
+    initialState ? JSON.parse(initialState) : []
+  );
+
+  useEffect(() => {
+    window.localStorage.setItem("items", JSON.stringify(items));
+    console.log(window.localStorage.getItem("items"));
+  }, [items]);
 
   const removeItem = (itemId) =>
     setItems(items.filter((item) => item.id !== itemId));
